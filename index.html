@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <style>
+    .ticket-container{
+        border: 1px solid black;
+        width: 800px;
+        height: 480px;
+        margin: 50px auto;
+        box-shadow: 0 0 10px 5px black;
+        display: flex;
+        font-family: sans-serif;
+
+    }
+    .user{
+    background-color: skyblue;
+    border-right: dashed;
+    width: 50% ;
+    }
+    .event{
+    background-color: rgb(173, 201, 211);
+    width: 50%;
+    }
+    .ticket-no{
+        font-family: 'Courier New', Courier, monospace;
+        padding: 20px;
+    }
+    .event-title{
+        font-family: 'Times New Roman', Times, serif;
+        padding: 20px;
+        font-size:30px;
+        align-items: center;
+    }
+    .college-logo{
+        height: 200px;
+        padding: 20px 30px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px){
+        .ticket-container{
+            flex-direction: column;
+
+        }
+    }
+    /* Laptop */
+    @media (min-width: 801px) and (max-width:1024px){
+        .ticket-container{
+            flex-direction: row;
+
+        }
+
+    }
+
+
+
+    </style>
+</head>
+<body>
+   <div class="ticket-container">
+    <div class="user">
+        <span class="ticket-no">Ticket No: 12345</span>
+        <p class="event-title">College Freshers Party </p>
+        <p class="event-title">Batch 2024-25 </p>
+        <img src="college logo.png" class="college-logo" alt="college">
+    </div>
+    <div class="event">
+        <span class="ticket-no">Ticket No: 12345</span>
+        <p class="event-title">College Freshers Party Invitation</p>
+        <p class="event-title">January 2025 | 1st | Sunday</p>  
+        <p class="event-title">Get Ready For A Fun Event</p> 
+        <p class="event-title">At 10 am In Our College Auditorium</p>   
+       
+    </div>
+   </div>
+</body>
+</html>
